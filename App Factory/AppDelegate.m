@@ -109,4 +109,8 @@
     return [self.savePath URLByAppendingPathComponent:@"Contents/Resources/"];
 }
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
 @end
