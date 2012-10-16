@@ -2,6 +2,9 @@
 #import "IAScriptDrop.h"
 #import "IAIconDrop.h"
 
+#include <sys/types.h>
+#include <sys/stat.h>
+
 @implementation AppDelegate
 @synthesize buildAppButton;
 @synthesize scriptDrop;
@@ -46,8 +49,22 @@
     NSURL *fullPath = [[self getAppDir] URLByAppendingPathComponent:[self getAppFilename]];
 
     NSFileManager *manager = [NSFileManager defaultManager];
+    
+    [self makeScriptExecutable:self.scriptDrop.scriptPath];
+    
     [manager createDirectoryAtURL:[self getAppDir] withIntermediateDirectories:YES attributes:nil error:nil];
     [manager copyItemAtURL:self.scriptDrop.scriptPath toURL:fullPath error:nil];
+}
+
+- (void)makeScriptExecutable : (NSURL *) scriptPath {
+    const char* cPath = [[scriptPath path] UTF8String];
+    
+    struct stat buf;
+    stat(cPath, &buf);
+    
+    mode_t mode = buf.st_mode;
+    mode |= S_IXUSR;
+    chmod(cPath, mode);
 }
 
 - (void)writeIcon
