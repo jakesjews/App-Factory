@@ -1,12 +1,4 @@
-//
-// Created by jacob on 8/25/12.
-//
-// To change the template use AppCode | Preferences | File Templates.
-//
-
-
 #import "IAScriptDrop.h"
-
 
 @implementation IAScriptDrop {
 

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.h
-//  Appifer
-//
-//  Created by Jacob Jewell on 8/25/12.
-//  Copyright (c) 2012 Jacob Jewell. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 @class IAScriptDrop;
