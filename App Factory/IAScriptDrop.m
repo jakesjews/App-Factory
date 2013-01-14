@@ -1,18 +1,16 @@
 #import "IAScriptDrop.h"
 
-@implementation IAScriptDrop {
+@implementation IAScriptDrop
 
-}
+-(id)initWithCoder:(NSCoder *)aDecoder {
 
--(id)initWithCoder:(NSCoder *)aDecoder
-{
     self = [super initWithCoder: aDecoder];
     [self registerForDraggedTypes: @[NSURLPboardType]];
     return self;
 }
 
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
-{
+- (BOOL)performDragOperation:(id <NSDraggingInfo>) sender {
+
     NSPasteboard *pboard = [sender draggingPasteboard];
 
     if ( [[pboard types] containsObject:NSURLPboardType] ) {
@@ -23,8 +21,8 @@
     return YES;
 }
 
-- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
-{
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+
     NSPasteboard *pboard;
     NSDragOperation sourceDragMask;
 
@@ -38,6 +36,7 @@
             return NSDragOperationCopy;
         }
     }
+    
     return NSDragOperationNone;
 }
 

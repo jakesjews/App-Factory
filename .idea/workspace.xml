@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e08c60f9-d789-4705-9d27-9daab7ff2b84" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/AppDelegate.h" afterPath="$PROJECT_DIR$/App Factory/AppDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/AppDelegate.m" afterPath="$PROJECT_DIR$/App Factory/AppDelegate.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" afterPath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" afterPath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/IAIconDrop.m" afterPath="$PROJECT_DIR$/App Factory/IAIconDrop.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/IAScriptDrop.m" afterPath="$PROJECT_DIR$/App Factory/IAScriptDrop.m" />
     </list>
@@ -26,37 +26,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_x86_64" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScriptConverter.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="15" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScriptConverter.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IAScriptDrop.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App Factory/IAScriptDrop.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="38" column="4" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.7800586">
               <folding />
             </state>
           </provider>
@@ -74,7 +47,7 @@
       <file leaf-file-name="IAIconDrop.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App Factory/IAIconDrop.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="3" column="26" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,15 +57,6 @@
         <entry file="file://$PROJECT_DIR$/App Factory/IAIconDrop.h">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,10 +76,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/App Factory/Classes/AppBuilder.h" />
-        <option value="$PROJECT_DIR$/App Factory/AppDelegate.m" />
         <option value="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" />
-        <option value="$PROJECT_DIR$/App Factory/AppDelegate.h" />
         <option value="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" />
+        <option value="$PROJECT_DIR$/App Factory/AppDelegate.h" />
+        <option value="$PROJECT_DIR$/App Factory/AppDelegate.m" />
         <option value="$PROJECT_DIR$/App Factory/IAIconDrop.m" />
         <option value="$PROJECT_DIR$/App Factory/IAScriptDrop.m" />
       </list>
@@ -203,13 +167,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="App Factory" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.App Factory">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="App Factory" TARGET_NAME="App Factory" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="App Factory" RUN_TARGET_NAME="App Factory" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -346,7 +310,9 @@
     <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="39" selection-start="372" selection-end="373" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#164#191#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -365,7 +331,9 @@
     <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="24" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#164#191#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -383,42 +351,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.h">
+    <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="14" column="15" selection-start="306" selection-end="306" vertical-scroll-proportion="-1.0298954">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.02052786">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
+        <state line="7" column="1" selection-start="162" selection-end="162" vertical-scroll-proportion="0.08370703">
+          <folding>
+            <element signature="e#164#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="57" selection-start="123" selection-end="123" vertical-scroll-proportion="0.102639295">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/IAIconDrop.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App Factory/IAIconDrop.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -432,9 +395,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App Factory/IAIconDrop.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/IAScriptDrop.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+        <state line="38" column="4" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.7800586">
           <folding />
         </state>
       </provider>

@@ -3,7 +3,7 @@
 @class IAScriptDrop;
 @class IAIconDrop;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {}
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSButton *buildAppButton;

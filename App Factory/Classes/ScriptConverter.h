@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 
-
 @interface ScriptConverter : NSObject {
     NSURL *scriptPath;
     NSURL *savePath;

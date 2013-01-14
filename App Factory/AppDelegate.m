@@ -6,6 +6,7 @@
 @implementation AppDelegate {
     NSButton *buildAppButton;
 }
+
 @synthesize buildAppButton;
 @synthesize scriptDrop;
 @synthesize iconDrop;
@@ -15,7 +16,9 @@
 }
 
 - (IBAction)buildAppClicked:(id)sender {
+
     if (self.scriptDrop.scriptPath != nil) {
+
         NSSavePanel *savePanel = [NSSavePanel savePanel];
         [savePanel setExtensionHidden:YES];
         savePanel.allowedFileTypes = @[@"app"];
@@ -34,6 +37,7 @@
         }];
     }
     else {
+
         NSAlert *alert = [NSAlert alertWithMessageText:@"No script selected"
                                          defaultButton:@"OK"
                                        alternateButton:nil
