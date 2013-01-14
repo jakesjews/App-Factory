@@ -14,8 +14,6 @@
     NSURL *iconPath;
     NSURL *fullAppPath;
     NSURL *resourcesPath;
-    NSURL *plistPath;
-    NSString *appFileName;
     NSString *iconFileName;
 
 }

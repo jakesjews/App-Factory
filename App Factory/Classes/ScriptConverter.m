@@ -1,10 +1,3 @@
-//
-// Created by jacob on 1/13/13.
-//
-// To change the template use AppCode | Preferences | File Templates.
-//
-
-
 #import "ScriptConverter.h"
 
 #import "IAScriptDrop.h"
@@ -21,12 +14,9 @@
 
     if (self) {
         scriptPath = theScriptPath;
-        savePath = theSavePath;
         iconPath = theIconPath;
-        fullAppPath = [savePath URLByAppendingPathComponent:@"Contents/MacOS/"];
-        resourcesPath = [savePath URLByAppendingPathComponent:@"Contents/Resources/"];
-        appFileName = [[scriptPath lastPathComponent] stringByDeletingPathExtension];
-        plistPath = [savePath URLByAppendingPathComponent:@"Contents/info.plist"];
+        fullAppPath = [theSavePath URLByAppendingPathComponent:@"Contents/MacOS/"];
+        resourcesPath = [theSavePath URLByAppendingPathComponent:@"Contents/Resources/"];
         iconFileName = [NSString stringWithFormat:@"%@.icns", [[iconPath lastPathComponent] stringByDeletingPathExtension]];
     }
 
@@ -34,6 +24,7 @@
 }
 
 - (void) createApp {
+
     [self writeScript];
 
     if (iconPath != nil) {
@@ -43,6 +34,8 @@
 }
 
 - (void) writeScript {
+
+    NSString *appFileName = [[scriptPath lastPathComponent] stringByDeletingPathExtension];
     NSURL *fullPath = [fullAppPath URLByAppendingPathComponent:appFileName];
 
     NSFileManager *manager = [NSFileManager defaultManager];
@@ -104,6 +97,7 @@
                     "\t</dict>\n"
                     "</plist>", [iconFileName stringByDeletingPathExtension]];
 
+    NSURL *plistPath = [savePath URLByAppendingPathComponent:@"Contents/info.plist"];
     [resourcesPath URLByAppendingPathComponent:iconFileName];
     [content writeToURL:plistPath atomically:YES encoding:NSUnicodeStringEncoding error:nil];
 }
