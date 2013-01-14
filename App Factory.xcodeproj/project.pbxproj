@@ -15,6 +15,7 @@
 		16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */; };
 		16F8D4EC15E9BE4200152DB9 /* IAScriptDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4EB15E9BE4200152DB9 /* IAScriptDrop.m */; };
 		16F8D4EE15E9BE6500152DB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */; };
+		60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 603545FBDCD82E7A5F4878C8 /* ScriptConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		16F8D4EB15E9BE4200152DB9 /* IAScriptDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAScriptDrop.m; sourceTree = "<group>"; };
 		16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		16F8D4F315E9BFC600152DB9 /* App Factory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "App Factory.entitlements"; sourceTree = "<group>"; };
+		603541ECA6A6F02E216341E1 /* ScriptConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptConverter.h; sourceTree = "<group>"; };
+		603545FBDCD82E7A5F4878C8 /* ScriptConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 				16F8D4E415E9BE0100152DB9 /* AppDelegate.h */,
 				16F8D4E515E9BE0100152DB9 /* AppDelegate.m */,
 				16F8D4CE15E9BDA000152DB9 /* Supporting Files */,
+				603544408AE1290E5F490D6F /* Classes */,
 			);
 			path = "App Factory";
 			sourceTree = "<group>";
@@ -110,6 +114,15 @@
 				16F8D4D515E9BDA000152DB9 /* App Factory-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		603544408AE1290E5F490D6F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				603545FBDCD82E7A5F4878C8 /* ScriptConverter.m */,
+				603541ECA6A6F02E216341E1 /* ScriptConverter.h */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +193,7 @@
 				16F8D4E615E9BE0100152DB9 /* AppDelegate.m in Sources */,
 				16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */,
 				16F8D4EC15E9BE4200152DB9 /* IAScriptDrop.m in Sources */,
+				60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,14 +266,13 @@
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				CODE_SIGN_ENTITLEMENTS = "App Factory/App Factory.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: JJ Company Jewell";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App Factory/App Factory-Prefix.pch";
 				INFOPLIST_FILE = "App Factory/App Factory-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "90AF3B05-78B6-4213-A231-A2F1B77F7E74";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,14 +284,13 @@
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				CODE_SIGN_ENTITLEMENTS = "App Factory/App Factory.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: JJ Company Jewell";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App Factory/App Factory-Prefix.pch";
 				INFOPLIST_FILE = "App Factory/App Factory-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "90AF3B05-78B6-4213-A231-A2F1B77F7E74";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};

@@ -18,8 +18,6 @@
 @property (strong) IBOutlet IAScriptDrop *scriptDrop;
 @property (strong) IBOutlet IAIconDrop *iconDrop;
 
-@property (strong) NSURL *savePath;
-
 -(IBAction)buildAppClicked:(id)sender;
 
 
