@@ -5,6 +5,9 @@
 
 @implementation AppDelegate {
     NSButton *buildAppButton;
+    IAScriptDrop *scriptDrop;
+    IAIconDrop *iconDrop;
+    __unsafe_unretained NSWindow *window;
 }
 
 @synthesize buildAppButton;

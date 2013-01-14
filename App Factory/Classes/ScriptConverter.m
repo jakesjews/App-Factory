@@ -1,9 +1,5 @@
 #import "ScriptConverter.h"
 
-#import "IAScriptDrop.h"
-#import "IAIconDrop.h"
-
-#include <sys/types.h>
 #include <sys/stat.h>
 
 @implementation ScriptConverter

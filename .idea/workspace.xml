@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e08c60f9-d789-4705-9d27-9daab7ff2b84" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/AppDelegate.h" afterPath="$PROJECT_DIR$/App Factory/AppDelegate.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/AppDelegate.m" afterPath="$PROJECT_DIR$/App Factory/AppDelegate.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" afterPath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" afterPath="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/IAIconDrop.m" afterPath="$PROJECT_DIR$/App Factory/IAIconDrop.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App Factory/IAScriptDrop.m" afterPath="$PROJECT_DIR$/App Factory/IAScriptDrop.m" />
     </list>
@@ -26,10 +28,39 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_x86_64" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IAScriptDrop.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="29" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#262#289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App Factory/main.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.28070176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScriptConverter.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAScriptDrop.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App Factory/IAScriptDrop.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="4" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.7800586">
+            <state line="38" column="0" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,12 +107,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/App Factory/Classes/AppBuilder.h" />
-        <option value="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" />
         <option value="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h" />
         <option value="$PROJECT_DIR$/App Factory/AppDelegate.h" />
-        <option value="$PROJECT_DIR$/App Factory/AppDelegate.m" />
         <option value="$PROJECT_DIR$/App Factory/IAIconDrop.m" />
         <option value="$PROJECT_DIR$/App Factory/IAScriptDrop.m" />
+        <option value="$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m" />
+        <option value="$PROJECT_DIR$/App Factory/AppDelegate.m" />
       </list>
     </option>
   </component>
@@ -89,6 +120,25 @@
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="803" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>ImplicitDeclarationOfIvar</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -219,13 +269,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="803" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34509528" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34509528" sideWeight="0.6008463" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39915374" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -233,11 +285,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -295,13 +345,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" />
@@ -311,7 +354,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="39" selection-start="372" selection-end="373" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#164#191#0" expanded="true" />
+            <element signature="e#262#289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -332,7 +375,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="24" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#164#191#0" expanded="true" />
+            <element signature="e#262#289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -351,26 +394,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="306" selection-end="306" vertical-scroll-proportion="-1.0298954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.02052786">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="162" selection-end="162" vertical-scroll-proportion="0.08370703">
-          <folding>
-            <element signature="e#164#191#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -404,7 +431,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App Factory/IAScriptDrop.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="4" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.7800586">
+        <state line="38" column="0" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App Factory/Classes/ScriptConverter.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App Factory/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#262#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App Factory/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.28070176">
           <folding />
         </state>
       </provider>

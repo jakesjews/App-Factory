@@ -36,7 +36,7 @@
             return NSDragOperationCopy;
         }
     }
-    
+
     return NSDragOperationNone;
 }
 
