@@ -14,11 +14,36 @@
     NSPasteboard *pboard = [sender draggingPasteboard];
 
     if ( [[pboard types] containsObject:NSURLPboardType] ) {
-        self.scriptPath = [NSURL URLFromPasteboard:pboard];
-        [self.scriptLabel setStringValue: [self.scriptPath lastPathComponent]];
-        [self.scriptLabel setTextColor:[NSColor controlDarkShadowColor]];
+        NSURL *scriptURL = [NSURL URLFromPasteboard:pboard];
+        
+        BOOL sizeValid = [self scriptSizeValid: scriptURL];
+        
+        if (sizeValid) {
+            self.scriptPath = scriptURL;
+            [self.scriptLabel setStringValue: [self.scriptPath lastPathComponent]];
+            [self.scriptLabel setTextColor:[NSColor controlDarkShadowColor]];
+        } else {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Script must be larger than 28 bytes"];
+            [alert runModal];
+        }
+        
     }
     return YES;
+}
+
+- (BOOL)scriptSizeValid:(NSURL *)scriptPath {
+    
+    NSString *path = [scriptPath path];
+    NSFileManager *man = [NSFileManager defaultManager];
+    NSError *err;
+    NSDictionary *attrs = [man attributesOfItemAtPath: path error: &err];
+    UInt64 result = [attrs fileSize];
+    
+    return (result > 28);
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {

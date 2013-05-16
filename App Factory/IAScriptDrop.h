@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <Foundation/NSFileManager.h>
 
 @interface IAScriptDrop : NSImageView
 
