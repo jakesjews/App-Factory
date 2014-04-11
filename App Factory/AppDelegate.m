@@ -33,7 +33,7 @@
 
                 ScriptConverter *converter =
                         [[ScriptConverter alloc] initWithPath: self.scriptDrop.scriptPath
-                                                               savePath: [savePanel URL]
+                                                               savePath: [[savePanel URL] path]
                                                                iconPath: self.iconDrop.iconPath];
                 [converter createApp];
             }

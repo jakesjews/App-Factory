@@ -14,12 +14,12 @@
     NSPasteboard *pboard = [sender draggingPasteboard];
 
     if ( [[pboard types] containsObject:NSURLPboardType] ) {
-        NSURL *scriptURL = [NSURL URLFromPasteboard:pboard];
+        NSString *scriptPath = [[NSURL URLFromPasteboard:pboard] path];
         
-        BOOL sizeValid = [self scriptSizeValid: scriptURL];
+        BOOL sizeValid = [self scriptSizeValid: scriptPath];
         
         if (sizeValid) {
-            self.scriptPath = scriptURL;
+            self.scriptPath = scriptPath;
             [self.scriptLabel setStringValue: [self.scriptPath lastPathComponent]];
             [self.scriptLabel setTextColor:[NSColor controlDarkShadowColor]];
         } else {
@@ -35,12 +35,11 @@
     return YES;
 }
 
-- (BOOL)scriptSizeValid:(NSURL *)scriptPath {
+- (BOOL)scriptSizeValid:(NSString *)scriptPath {
     
-    NSString *path = [scriptPath path];
     NSFileManager *man = [NSFileManager defaultManager];
     NSError *err;
-    NSDictionary *attrs = [man attributesOfItemAtPath: path error: &err];
+    NSDictionary *attrs = [man attributesOfItemAtPath: scriptPath error: &err];
     UInt64 result = [attrs fileSize];
     
     return (result > 28);
