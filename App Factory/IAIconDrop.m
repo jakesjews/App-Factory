@@ -3,7 +3,7 @@
 
 @implementation IAIconDrop
 
--(instancetype)initWithCoder:(NSCoder *) aDecoder {
+-(id)initWithCoder:(NSCoder *) aDecoder {
 
     self = [super initWithCoder: aDecoder];
     [self registerForDraggedTypes: @[NSURLPboardType]];

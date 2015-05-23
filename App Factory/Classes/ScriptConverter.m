@@ -4,7 +4,7 @@
 
 @implementation ScriptConverter
 
-- (instancetype) initWithPath:(NSString *)theScriptPath savePath:(NSString *) theSavePath iconPath:(NSString *) theIconPath {
+- (id) initWithPath:(NSString *)theScriptPath savePath:(NSString *) theSavePath iconPath:(NSString *) theIconPath {
 
     self = [super init];
 
