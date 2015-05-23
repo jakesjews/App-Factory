@@ -3,7 +3,7 @@
 
 @interface IAScriptDrop : NSImageView
 
-@property (strong) NSString *scriptPath;
+@property (strong) NSURL *scriptPath;
 @property (strong) IBOutlet NSTextField *scriptLabel;
 
 @end

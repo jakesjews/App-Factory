@@ -2,7 +2,7 @@
 
 @interface IAIconDrop : NSImageView
 
-@property (strong) NSString* iconPath;
-@property (strong) IBOutlet NSTextField* iconLabel;
+@property (strong) NSURL *iconPath;
+@property (strong) IBOutlet NSTextField *iconLabel;
 
 @end

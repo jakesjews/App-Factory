@@ -1,16 +1,16 @@
 #import <Foundation/Foundation.h>
 
 @interface ScriptConverter : NSObject {
-    NSString *scriptPath;
-    NSString *savePath;
-    NSString *iconPath;
-    NSString *fullAppPath;
-    NSString *resourcesPath;
+    NSURL *scriptPath;
+    NSURL *savePath;
+    NSURL *iconPath;
+    NSURL *fullAppPath;
+    NSURL *resourcesPath;
     NSString *iconFileName;
 
 }
 
-- (id) initWithPath:(NSString *)theScriptPath savePath:(NSString *) theSavePath iconPath:(NSString *) theIconPath;
+- (id) initWithPath:(NSURL *)theScriptPath savePath:(NSURL *) theSavePath iconPath:(NSURL *) theIconPath;
 - (void) createApp;
 
 @end

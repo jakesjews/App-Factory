@@ -16,12 +16,12 @@
 
     if ( [[pboard types] containsObject:NSURLPboardType] ) {
 
-        self.iconPath = [[NSURL URLFromPasteboard:pboard] path];
+        self.iconPath = [NSURL URLFromPasteboard:pboard];
 
         [self.iconLabel setHidden:YES];
 
         // Show the selected icon image
-        NSImage *newImage = [[NSImage alloc] initWithContentsOfFile:self.iconPath];
+        NSImage *newImage = [[NSImage alloc] initWithContentsOfURL:self.iconPath];
         [self setImage:newImage];
         [self setNeedsDisplay:YES];
     }
