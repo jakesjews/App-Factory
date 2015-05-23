@@ -13,25 +13,40 @@
 
     NSPasteboard *pboard = [sender draggingPasteboard];
 
-    if ( [[pboard types] containsObject:NSURLPboardType] ) {
-        NSURL *scriptURL = [NSURL URLFromPasteboard:pboard];
-        
-        BOOL sizeValid = [self scriptSizeValid: scriptURL];
-        
-        if (sizeValid) {
-            self.scriptPath = scriptURL;
-            [self.scriptLabel setStringValue: [self.scriptPath lastPathComponent]];
-            [self.scriptLabel setTextColor:[NSColor controlDarkShadowColor]];
-        } else {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
-                                             defaultButton:@"OK"
-                                           alternateButton:nil
-                                               otherButton:nil
-                                 informativeTextWithFormat:@"Script must be larger than 28 bytes"];
-            [alert runModal];
-        }
-        
+    if (![[pboard types] containsObject:NSURLPboardType]) {
+        return YES;
     }
+    
+    NSURL *scriptURL = [NSURL URLFromPasteboard:pboard];
+    BOOL sizeValid   = [self scriptSizeValid: scriptURL];
+    
+    if (!sizeValid) {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
+                                         defaultButton:@"OK"
+                                       alternateButton:nil
+                                           otherButton:nil
+                             informativeTextWithFormat:@"Script must be larger than 28 bytes"];
+        [alert runModal];
+        return YES;
+    }
+    
+    NSString *fileContents = [NSString stringWithContentsOfFile:[scriptURL path] encoding:NSUTF8StringEncoding error:NULL];
+    NSString *line = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]][0];
+    
+    if (![line containsString: @"#!"]) {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
+                                     defaultButton:@"OK"
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@"Script must start with a valid shebang\nhttp://en.wikipedia.org/wiki/Shebang_(Unix)"];
+        [alert runModal];
+        return YES;
+    }
+    
+    self.scriptPath = scriptURL;
+    [self.scriptLabel setStringValue: [self.scriptPath lastPathComponent]];
+    [self.scriptLabel setTextColor:[NSColor controlDarkShadowColor]];
+    
     return YES;
 }
 
