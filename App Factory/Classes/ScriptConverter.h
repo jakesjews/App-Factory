@@ -10,7 +10,7 @@
 
 }
 
-- (id) initWithPath:(NSURL *)theScriptPath savePath:(NSURL *) theSavePath iconPath:(NSURL *) theIconPath;
+- (instancetype) initWithPath:(NSURL *)theScriptPath savePath:(NSURL *) theSavePath iconPath:(NSURL *) theIconPath NS_DESIGNATED_INITIALIZER;
 - (void) createApp;
 
 @end
