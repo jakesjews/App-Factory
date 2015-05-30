@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1606619315EAEF3700B9DB89 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 1606619215EAEF3700B9DB89 /* icon.iconset */; };
+		16D678341B19576C00503223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D678331B19576C00503223 /* AppDelegate.swift */; };
+		16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6785E1B195E2000503223 /* IAScriptDrop.swift */; };
 		16F8D4C815E9BDA000152DB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F8D4C715E9BDA000152DB9 /* Cocoa.framework */; };
 		16F8D4D215E9BDA000152DB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4D015E9BDA000152DB9 /* InfoPlist.strings */; };
 		16F8D4D415E9BDA000152DB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4D315E9BDA000152DB9 /* main.m */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		1606619215EAEF3700B9DB89 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
+		16D678331B19576C00503223 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16D6785E1B195E2000503223 /* IAScriptDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAScriptDrop.swift; sourceTree = "<group>"; };
 		16F8D4C315E9BDA000152DB9 /* App Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Factory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F8D4C715E9BDA000152DB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		16F8D4CA15E9BDA000152DB9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +105,8 @@
 				16F8D4E515E9BE0100152DB9 /* AppDelegate.m */,
 				16F8D4CE15E9BDA000152DB9 /* Supporting Files */,
 				603544408AE1290E5F490D6F /* Classes */,
+				16D678331B19576C00503223 /* AppDelegate.swift */,
+				16D6785E1B195E2000503223 /* IAScriptDrop.swift */,
 			);
 			path = "App Factory";
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D678341B19576C00503223 /* AppDelegate.swift in Sources */,
+				16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */,
 				16F8D4D415E9BDA000152DB9 /* main.m in Sources */,
 				16F8D4E615E9BE0100152DB9 /* AppDelegate.m in Sources */,
 				16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */,
@@ -266,6 +274,7 @@
 		16F8D4E215E9BDA000152DB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				CODE_SIGN_ENTITLEMENTS = "App Factory/App Factory.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
@@ -273,9 +282,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App Factory/App Factory-Prefix.pch";
 				INFOPLIST_FILE = "App Factory/App Factory-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,6 +295,7 @@
 		16F8D4E315E9BDA000152DB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				CODE_SIGN_ENTITLEMENTS = "App Factory/App Factory.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
@@ -291,6 +303,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App Factory/App Factory-Prefix.pch";
 				INFOPLIST_FILE = "App Factory/App Factory-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
