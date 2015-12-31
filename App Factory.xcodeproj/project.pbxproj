@@ -13,9 +13,7 @@
 		16F8D4C815E9BDA000152DB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F8D4C715E9BDA000152DB9 /* Cocoa.framework */; };
 		16F8D4D215E9BDA000152DB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4D015E9BDA000152DB9 /* InfoPlist.strings */; };
 		16F8D4D415E9BDA000152DB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4D315E9BDA000152DB9 /* main.m */; };
-		16F8D4E615E9BE0100152DB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4E515E9BE0100152DB9 /* AppDelegate.m */; };
 		16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */; };
-		16F8D4EC15E9BE4200152DB9 /* IAScriptDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4EB15E9BE4200152DB9 /* IAScriptDrop.m */; };
 		16F8D4EE15E9BE6500152DB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */; };
 		60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 603545FBDCD82E7A5F4878C8 /* ScriptConverter.m */; };
 /* End PBXBuildFile section */
@@ -32,12 +30,8 @@
 		16F8D4D115E9BDA000152DB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F8D4D315E9BDA000152DB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16F8D4D515E9BDA000152DB9 /* App Factory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App Factory-Prefix.pch"; sourceTree = "<group>"; };
-		16F8D4E415E9BE0100152DB9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		16F8D4E515E9BE0100152DB9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		16F8D4E715E9BE3B00152DB9 /* IAIconDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAIconDrop.h; sourceTree = "<group>"; };
 		16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAIconDrop.m; sourceTree = "<group>"; };
-		16F8D4EA15E9BE4200152DB9 /* IAScriptDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAScriptDrop.h; sourceTree = "<group>"; };
-		16F8D4EB15E9BE4200152DB9 /* IAScriptDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAScriptDrop.m; sourceTree = "<group>"; };
 		16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		16F8D4F315E9BFC600152DB9 /* App Factory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "App Factory.entitlements"; sourceTree = "<group>"; };
 		603541ECA6A6F02E216341E1 /* ScriptConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptConverter.h; sourceTree = "<group>"; };
@@ -97,12 +91,8 @@
 			children = (
 				16F8D4F315E9BFC600152DB9 /* App Factory.entitlements */,
 				16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */,
-				16F8D4EA15E9BE4200152DB9 /* IAScriptDrop.h */,
-				16F8D4EB15E9BE4200152DB9 /* IAScriptDrop.m */,
 				16F8D4E715E9BE3B00152DB9 /* IAIconDrop.h */,
 				16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */,
-				16F8D4E415E9BE0100152DB9 /* AppDelegate.h */,
-				16F8D4E515E9BE0100152DB9 /* AppDelegate.m */,
 				16F8D4CE15E9BDA000152DB9 /* Supporting Files */,
 				603544408AE1290E5F490D6F /* Classes */,
 				16D678331B19576C00503223 /* AppDelegate.swift */,
@@ -204,9 +194,7 @@
 				16D678341B19576C00503223 /* AppDelegate.swift in Sources */,
 				16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */,
 				16F8D4D415E9BDA000152DB9 /* main.m in Sources */,
-				16F8D4E615E9BE0100152DB9 /* AppDelegate.m in Sources */,
 				16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */,
-				16F8D4EC15E9BE4200152DB9 /* IAScriptDrop.m in Sources */,
 				60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

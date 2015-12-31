@@ -27,12 +27,17 @@ class IAScriptDrop: NSImageView {
             return true
         }
         
-        var err: NSError?
+        let fileContents: NSString
+        do {
+            fileContents = try NSString(contentsOfFile: scriptUrl!.path!, encoding: NSUTF8StringEncoding)
+        }
+        catch _ {
+            return false
+        }
         
-        let fileContents = String(contentsOfFile: scriptUrl!.path!, encoding: NSUTF8StringEncoding, error: &err)
-        let line = fileContents?.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())[0]
+        let line = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())[0]
         
-        if line!.rangeOfString("#!") != nil {
+        if line.rangeOfString("#!") != nil {
             let alert: NSAlert = NSAlert()
             alert.messageText = "Error"
             alert.informativeText =  "Script must start with a valid shebang\nhttp://en.wikipedia.org/wiki/Shebang_(Unix)"
@@ -50,8 +55,13 @@ class IAScriptDrop: NSImageView {
     func scriptSizeValid(scriptPath: NSURL) -> Bool {
         let path = scriptPath.path
         let man = NSFileManager.defaultManager()
-        var err: NSError?
-        let attrs: NSDictionary? = man.attributesOfItemAtPath(path!, error: &err)
+        
+        let attrs: NSDictionary?
+        do {
+            attrs = try man.attributesOfItemAtPath(path!)
+        } catch _ {
+            return false
+        }
         
         let result = attrs!.fileSize()
         

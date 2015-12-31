@@ -8,21 +8,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var scriptDrop: IAScriptDrop!
     @IBOutlet var iconDrop: IAIconDrop!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-    }
-    
-    func applicationWillTerminate(aNotification: NSNotification) {
-    }
-    
     @IBAction func buildAppClicked(sender : AnyObject) {
-        if self.scriptDrop.scriptPath {
-            let savePanel = NSSavePanel.savePanel
-            savePanel.setExtensionHidden(true)
-            savePanel.allowedFileTypes = ["app"]
+        if self.scriptDrop.scriptPath != nil {
+            let savePanel = NSSavePanel()
+            savePanel.extensionHidden = true
             savePanel.allowsOtherFileTypes = false
-            savePanel.nameFieldStringValue = self.scriptDrop.scriptPath.lastPathComponent.stringByDeletingPathExtension
+            savePanel.nameFieldStringValue = String(self.scriptDrop.scriptPath.URLByDeletingPathExtension!.lastPathComponent!)
             
-            savePanel.beginWithCompletionHandler({ (result) -> Void in
+            savePanel.beginWithCompletionHandler({ (response) -> Void in
                 if response == NSFileHandlingPanelOKButton {
                     let converter: ScriptConverter = ScriptConverter(
                         path: scriptDrop.scriptPath,
@@ -34,15 +27,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             })
         }
         else {
-            let alert: NSAlert = NSAlert(
-                message: "No script selected",
-                defaultButton: "OK",
-                alternateButton: nil,
-                otherButton: nil,
-                informativeTextWithFormat: "Please select a script file"
-            )
-            alert.runModal();
+            let alert: NSAlert = NSAlert()
+            alert.messageText = "No script selected"
+            alert.addButtonWithTitle("OK")
+            alert.informativeText = "Please select a script file"
+            alert.runModal()
         }
+    }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(theApplication: NSApplication) -> Bool {
+        return true;
     }
 }
 
