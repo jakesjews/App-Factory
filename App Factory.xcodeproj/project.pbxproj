@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1606619315EAEF3700B9DB89 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 1606619215EAEF3700B9DB89 /* icon.iconset */; };
+		16B89A811C35EB4300177AFA /* IAIconDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B89A801C35EB4300177AFA /* IAIconDrop.swift */; };
 		16D678341B19576C00503223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D678331B19576C00503223 /* AppDelegate.swift */; };
 		16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6785E1B195E2000503223 /* IAScriptDrop.swift */; };
 		16F8D4C815E9BDA000152DB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F8D4C715E9BDA000152DB9 /* Cocoa.framework */; };
 		16F8D4D215E9BDA000152DB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4D015E9BDA000152DB9 /* InfoPlist.strings */; };
 		16F8D4D415E9BDA000152DB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4D315E9BDA000152DB9 /* main.m */; };
-		16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */; };
 		16F8D4EE15E9BE6500152DB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */; };
 		60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 603545FBDCD82E7A5F4878C8 /* ScriptConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1606619215EAEF3700B9DB89 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
+		16B89A801C35EB4300177AFA /* IAIconDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAIconDrop.swift; sourceTree = "<group>"; };
 		16D678331B19576C00503223 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16D6785E1B195E2000503223 /* IAScriptDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAScriptDrop.swift; sourceTree = "<group>"; };
 		16F8D4C315E9BDA000152DB9 /* App Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Factory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +31,6 @@
 		16F8D4D115E9BDA000152DB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F8D4D315E9BDA000152DB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16F8D4D515E9BDA000152DB9 /* App Factory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App Factory-Prefix.pch"; sourceTree = "<group>"; };
-		16F8D4E715E9BE3B00152DB9 /* IAIconDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAIconDrop.h; sourceTree = "<group>"; };
-		16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAIconDrop.m; sourceTree = "<group>"; };
 		16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		16F8D4F315E9BFC600152DB9 /* App Factory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "App Factory.entitlements"; sourceTree = "<group>"; };
 		603541ECA6A6F02E216341E1 /* ScriptConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptConverter.h; sourceTree = "<group>"; };
@@ -91,12 +90,11 @@
 			children = (
 				16F8D4F315E9BFC600152DB9 /* App Factory.entitlements */,
 				16F8D4ED15E9BE6500152DB9 /* MainMenu.xib */,
-				16F8D4E715E9BE3B00152DB9 /* IAIconDrop.h */,
-				16F8D4E815E9BE3B00152DB9 /* IAIconDrop.m */,
 				16F8D4CE15E9BDA000152DB9 /* Supporting Files */,
 				603544408AE1290E5F490D6F /* Classes */,
 				16D678331B19576C00503223 /* AppDelegate.swift */,
 				16D6785E1B195E2000503223 /* IAScriptDrop.swift */,
+				16B89A801C35EB4300177AFA /* IAIconDrop.swift */,
 			);
 			path = "App Factory";
 			sourceTree = "<group>";
@@ -192,9 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D678341B19576C00503223 /* AppDelegate.swift in Sources */,
+				16B89A811C35EB4300177AFA /* IAIconDrop.swift in Sources */,
 				16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */,
 				16F8D4D415E9BDA000152DB9 /* main.m in Sources */,
-				16F8D4E915E9BE3B00152DB9 /* IAIconDrop.m in Sources */,
 				60354525B1225093D3A7A059 /* ScriptConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
