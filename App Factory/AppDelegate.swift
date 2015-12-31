@@ -17,12 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             savePanel.beginWithCompletionHandler({ (response) -> Void in
                 if response == NSFileHandlingPanelOKButton {
-                    let converter: ScriptConverter = ScriptConverter(
-                        path: scriptDrop.scriptPath,
-                        savePath: savePanel.URL,
+                    let converter = ScriptConverter(
+                        scriptPath: self.scriptDrop.scriptPath,
+                        savePath: savePanel.URL!,
                         iconPath: self.iconDrop.iconPath
                     )
-                    converter.createApp();
+                    converter!.createApp();
                 }
             })
         }

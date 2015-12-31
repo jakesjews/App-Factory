@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1606619315EAEF3700B9DB89 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 1606619215EAEF3700B9DB89 /* icon.iconset */; };
 		16B89A811C35EB4300177AFA /* IAIconDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B89A801C35EB4300177AFA /* IAIconDrop.swift */; };
+		16B89A831C35EDF500177AFA /* ScriptConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B89A821C35EDF500177AFA /* ScriptConverter.swift */; };
 		16D678341B19576C00503223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D678331B19576C00503223 /* AppDelegate.swift */; };
 		16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6785E1B195E2000503223 /* IAScriptDrop.swift */; };
 		16F8D4C815E9BDA000152DB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F8D4C715E9BDA000152DB9 /* Cocoa.framework */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		1606619215EAEF3700B9DB89 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
 		16B89A801C35EB4300177AFA /* IAIconDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAIconDrop.swift; sourceTree = "<group>"; };
+		16B89A821C35EDF500177AFA /* ScriptConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptConverter.swift; sourceTree = "<group>"; };
 		16D678331B19576C00503223 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16D6785E1B195E2000503223 /* IAScriptDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAScriptDrop.swift; sourceTree = "<group>"; };
 		16F8D4C315E9BDA000152DB9 /* App Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Factory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				16D678331B19576C00503223 /* AppDelegate.swift */,
 				16D6785E1B195E2000503223 /* IAScriptDrop.swift */,
 				16B89A801C35EB4300177AFA /* IAIconDrop.swift */,
+				16B89A821C35EDF500177AFA /* ScriptConverter.swift */,
 			);
 			path = "App Factory";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D678341B19576C00503223 /* AppDelegate.swift in Sources */,
+				16B89A831C35EDF500177AFA /* ScriptConverter.swift in Sources */,
 				16B89A811C35EB4300177AFA /* IAIconDrop.swift in Sources */,
 				16D6785F1B195E2000503223 /* IAScriptDrop.swift in Sources */,
 				16F8D4D415E9BDA000152DB9 /* main.m in Sources */,
