@@ -71,13 +71,13 @@ class ScriptConverter {
         let iconStringPath = NSString(string: self.iconFileName).stringByDeletingPathExtension
         
         let content =
-            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-            "<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n"
-            "<plist version=\"1.0\">\n"
-            "\t<dict>\n"
-            "\t\t<key>CFBundleIconFile</key>\n"
-            "\t\t<string>\(iconStringPath)</string>\n"
-            "\t</dict>\n"
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+            "<plist version=\"1.0\">\n" +
+            "\t<dict>\n" +
+            "\t\t<key>CFBundleIconFile</key>\n" +
+            "\t\t<string>\(iconStringPath)</string>\n" +
+            "\t</dict>\n" +
             "</plist>"
         
         let plistPath = savePath.URLByAppendingPathComponent("Contents/info.plist")
