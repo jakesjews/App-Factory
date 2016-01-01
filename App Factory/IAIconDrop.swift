@@ -12,8 +12,7 @@ class IAIconDrop: NSImageView {
     
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
         let pboard = sender.draggingPasteboard()
-        
-        if !(pboard.types as NSArray!).containsObject(NSURLPboardType) {
+        if !pboard.types!.contains(NSURLPboardType) {
             return true
         }
         
@@ -28,13 +27,12 @@ class IAIconDrop: NSImageView {
         let sourceDragMask = sender.draggingSourceOperationMask()
         let pboard = sender.draggingPasteboard()
         
-        if (pboard.types as NSArray!).containsObject(NSURLPboardType) {
-            if sourceDragMask == NSDragOperation.Link {
+        if pboard.types!.contains(NSURLPboardType) {
+            if sourceDragMask.contains(NSDragOperation.Link) {
                 return NSDragOperation.Link
-            } else if sourceDragMask == NSDragOperation.Copy {
+            } else if sourceDragMask.contains(NSDragOperation.Copy) {
                 return NSDragOperation.Copy
             }
-            
         }
         
         return NSDragOperation.None

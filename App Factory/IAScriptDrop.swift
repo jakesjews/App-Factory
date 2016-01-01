@@ -13,7 +13,7 @@ class IAScriptDrop: NSImageView {
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
         let pboard = sender.draggingPasteboard()
         
-        if !(pboard.types as NSArray!).containsObject(NSURLPboardType) {
+        if !pboard.types!.contains(NSURLPboardType) {
             return true
         }
         
@@ -37,7 +37,7 @@ class IAScriptDrop: NSImageView {
         
         let line = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())[0]
         
-        if line.rangeOfString("#!") != nil {
+        if !line.containsString("#!") {
             let alert: NSAlert = NSAlert()
             alert.messageText = "Error"
             alert.informativeText =  "Script must start with a valid shebang\nhttp://en.wikipedia.org/wiki/Shebang_(Unix)"
@@ -69,13 +69,14 @@ class IAScriptDrop: NSImageView {
     }
     
     override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-        let sourceDragMask = sender.draggingSourceOperationMask()
         let pboard = sender.draggingPasteboard()
         
-        if (pboard.types as NSArray!).containsObject(NSURLPboardType) {
-            if sourceDragMask == NSDragOperation.Link {
+        if pboard.types!.contains(NSURLPboardType) {
+            let sourceDragMask = sender.draggingSourceOperationMask()
+            
+            if sourceDragMask.contains(NSDragOperation.Link) {
                 return NSDragOperation.Link
-            } else if sourceDragMask == NSDragOperation.Copy {
+            } else if sourceDragMask.contains(NSDragOperation.Copy) {
                 return NSDragOperation.Copy
             }
             

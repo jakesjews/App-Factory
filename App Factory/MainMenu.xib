@@ -118,14 +118,14 @@
                             <action selector="buildAppClicked:" target="494" id="578"/>
                         </connections>
                     </button>
-                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="540" customClass="IAIconDrop">
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="540" customClass="IAIconDrop" customModule="App_Factory" customModuleProvider="target">
                         <rect key="frame" x="226" y="58" width="167" height="150"/>
                         <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="541"/>
                         <connections>
                             <outlet property="iconLabel" destination="622" id="709"/>
                         </connections>
                     </imageView>
-                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="551" customClass="IAScriptDrop">
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="551" customClass="IAScriptDrop" customModule="App_Factory" customModuleProvider="target">
                         <rect key="frame" x="45" y="58" width="167" height="150"/>
                         <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="554"/>
                         <connections>
@@ -172,8 +172,9 @@
                     <constraint firstAttribute="bottom" secondItem="536" secondAttribute="bottom" constant="20" symbolic="YES" id="706"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="1" y="126.5"/>
         </window>
-        <customObject id="494" customClass="AppDelegate">
+        <customObject id="494" customClass="AppDelegate" customModule="App_Factory" customModuleProvider="target">
             <connections>
                 <outlet property="buildAppButton" destination="536" id="572"/>
                 <outlet property="iconDrop" destination="540" id="577"/>
