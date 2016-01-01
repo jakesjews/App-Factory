@@ -56,15 +56,13 @@ class ScriptConverter {
         
         try manager.createDirectoryAtURL(self.resourcesPath, withIntermediateDirectories: true, attributes: nil)
         
-        let img = CGImageSourceCreateWithURL(self.iconPath, nil)
-        
-        CGImageSourceCreateImageAtIndex(img!, 1, nil)
-        
+        let source   = CGImageSourceCreateWithURL(self.iconPath, nil)!
+        let img      = CGImageSourceCreateImageAtIndex(source, 0, nil)!
         let destPath = self.resourcesPath.URLByAppendingPathComponent(self.iconFileName)
-        let dest     = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 1, nil)
+        let dest     = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 0, nil)!
         
-        CGImageDestinationAddImageFromSource(dest!, img!, 0, nil)
-        CGImageDestinationFinalize(dest!)
+        CGImageDestinationAddImage(dest, img, nil)
+        CGImageDestinationFinalize(dest)
     }
     
     func writePlist() throws {
