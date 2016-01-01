@@ -57,12 +57,31 @@ class ScriptConverter {
         
         try manager.createDirectoryAtURL(self.resourcesPath, withIntermediateDirectories: true, attributes: nil)
         
-        let img      = NSImage(contentsOfURL: self.iconPath)!.CGImageForProposedRect(nil, context: nil, hints: nil)!
+        var img  = NSImage(contentsOfURL: self.iconPath)!.CGImageForProposedRect(nil, context: nil, hints: nil)!
+        
+        if (!imageHasCorrectSize(img)) {
+            img = scaleImage(img, width: 256, height: 256)
+        }
+        
         let destPath = self.resourcesPath.URLByAppendingPathComponent(self.iconFileName)
         let dest     = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 0, nil)!
         
         CGImageDestinationAddImage(dest, img, nil)
         CGImageDestinationFinalize(dest)
+    }
+    
+    func scaleImage(image: CGImage, width: Int, height: Int) -> CGImage {
+        let bitsPerComponent = CGImageGetBitsPerComponent(image)
+        let bytesPerRow      = CGImageGetBytesPerRow(image)
+        let colorSpace       = CGImageGetColorSpace(image)
+        let bitmapInfo       = CGImageAlphaInfo.NoneSkipLast
+        let bytesPerPixel    = bytesPerRow / CGImageGetWidth(image);
+        let destBytesPerRow  = bytesPerPixel * width;
+        let context          = CGBitmapContextCreate(nil, width, height, bitsPerComponent, destBytesPerRow, colorSpace, bitmapInfo.rawValue)
+        
+        CGContextSetInterpolationQuality(context, CGInterpolationQuality.High)
+        CGContextDrawImage(context, CGRect(origin: CGPointZero, size: CGSize(width: CGFloat(width), height: CGFloat(height))), image)
+        return CGBitmapContextCreateImage(context)!
     }
     
     func imageHasCorrectSize(image: CGImage) -> Bool {
