@@ -1,4 +1,5 @@
 import Foundation
+import AVFoundation
 
 class ScriptConverter {
     var scriptPath: NSURL
@@ -56,8 +57,7 @@ class ScriptConverter {
         
         try manager.createDirectoryAtURL(self.resourcesPath, withIntermediateDirectories: true, attributes: nil)
         
-        let source   = CGImageSourceCreateWithURL(self.iconPath, nil)!
-        let img      = CGImageSourceCreateImageAtIndex(source, 0, nil)!
+        let img      = NSImage(contentsOfURL: self.iconPath)!.CGImageForProposedRect(nil, context: nil, hints: nil)!
         let destPath = self.resourcesPath.URLByAppendingPathComponent(self.iconFileName)
         let dest     = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 0, nil)!
         
