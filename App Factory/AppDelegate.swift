@@ -15,14 +15,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             savePanel.allowsOtherFileTypes = false
             savePanel.nameFieldStringValue = String(self.scriptDrop.scriptPath.URLByDeletingPathExtension!.lastPathComponent!)
             
-            savePanel.beginWithCompletionHandler({ (response) -> Void in
+            savePanel.beginWithCompletionHandler({ response in
                 if response == NSFileHandlingPanelOKButton {
                     let converter = ScriptConverter(
                         scriptPath: self.scriptDrop.scriptPath,
                         savePath: savePanel.URL!,
                         iconPath: self.iconDrop.iconPath
                     )
-                    converter!.createApp();
+                    
+                    do {
+                        try converter!.createApp();
+                    } catch _ {
+                        
+                    }
                 }
             })
         }
