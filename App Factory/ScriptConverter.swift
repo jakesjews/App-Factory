@@ -33,17 +33,16 @@ class ScriptConverter {
     func writeScript() throws {
         try makeScriptExecutable()
         
-        let manager  = NSFileManager.defaultManager()
-        let appFileName = self.scriptPath.URLByDeletingLastPathComponent!.lastPathComponent
-        let fullPath = self.fullAppPath.URLByAppendingPathComponent(appFileName!)
+        let manager     = NSFileManager.defaultManager()
+        let appFileName = self.scriptPath.URLByDeletingPathExtension!.lastPathComponent
+        let fullPath    = self.fullAppPath.URLByAppendingPathComponent(appFileName!)
         
         try manager.createDirectoryAtURL(fullAppPath, withIntermediateDirectories: true, attributes: nil)
-
         try manager.copyItemAtURL(self.scriptPath, toURL: fullPath)
     }
     
     func makeScriptExecutable() throws {
-        let manager  = NSFileManager.defaultManager()
+        let manager    = NSFileManager.defaultManager()
         let scriptPath = self.scriptPath.path!
         var attributes = try manager.attributesOfItemAtPath(scriptPath)
         
@@ -53,7 +52,7 @@ class ScriptConverter {
     }
     
     func writeIcon() throws {
-        let manager  = NSFileManager.defaultManager()
+        let manager = NSFileManager.defaultManager()
         
         try manager.createDirectoryAtURL(self.resourcesPath, withIntermediateDirectories: true, attributes: nil)
         
@@ -62,7 +61,7 @@ class ScriptConverter {
         CGImageSourceCreateImageAtIndex(img!, 1, nil)
         
         let destPath = self.resourcesPath.URLByAppendingPathComponent(self.iconFileName)
-        let dest = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 1, nil)
+        let dest     = CGImageDestinationCreateWithURL(destPath, kUTTypeAppleICNS, 1, nil)
         
         CGImageDestinationAddImageFromSource(dest!, img!, 0, nil)
         CGImageDestinationFinalize(dest!)
@@ -82,8 +81,7 @@ class ScriptConverter {
             "</plist>"
         
         let plistPath = savePath.URLByAppendingPathComponent("Contents/info.plist")
-        resourcesPath.URLByAppendingPathComponent(self.iconFileName)
-        
+
         try content.writeToURL(plistPath, atomically: true, encoding: NSUnicodeStringEncoding)
     }
 
