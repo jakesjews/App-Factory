@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let savePanel = NSSavePanel()
             savePanel.extensionHidden = true
             savePanel.allowsOtherFileTypes = false
-            savePanel.nameFieldStringValue = String(self.scriptDrop.scriptPath.URLByDeletingPathExtension!.lastPathComponent!)
+            savePanel.nameFieldStringValue = self.scriptDrop.scriptPath.URLByDeletingPathExtension!.lastPathComponent!
             
             savePanel.beginWithCompletionHandler({ response in
                 if response == NSFileHandlingPanelOKButton {

@@ -27,9 +27,9 @@ class IAScriptDrop: NSImageView {
             return true
         }
         
-        let fileContents: NSString
+        let fileContents: String
         do {
-            fileContents = try NSString(contentsOfFile: scriptUrl!.path!, encoding: NSUTF8StringEncoding)
+            fileContents = try String(contentsOfFile: scriptUrl!.path!, encoding: NSUTF8StringEncoding)
         }
         catch _ {
             return false
