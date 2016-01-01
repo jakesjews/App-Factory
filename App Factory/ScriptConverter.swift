@@ -48,7 +48,7 @@ class ScriptConverter {
         var attributes = try manager.attributesOfItemAtPath(scriptPath)
         
         let existing = UInt16(attributes[NSFilePosixPermissions]!.shortValue)
-        attributes[NSFilePosixPermissions] = String(existing | S_IXUSR)
+        attributes[NSFilePosixPermissions] = Int(existing | S_IXUSR)
         try manager.setAttributes(attributes, ofItemAtPath: scriptPath)
     }
     
