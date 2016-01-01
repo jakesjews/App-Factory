@@ -65,6 +65,15 @@ class ScriptConverter {
         CGImageDestinationFinalize(dest)
     }
     
+    func imageHasCorrectSize(image: CGImage) -> Bool {
+        let allowedSizes = [16, 32, 48, 128, 256, 512, 1024]
+        
+        let height = CGImageGetHeight(image)
+        let width  = CGImageGetWidth(image)
+        
+        return allowedSizes.contains(height) && height == width
+    }
+    
     func writePlist() throws {
         let iconStringPath = NSString(string: self.iconFileName).stringByDeletingPathExtension
         
