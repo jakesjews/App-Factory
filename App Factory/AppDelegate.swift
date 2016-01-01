@@ -25,8 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     
                     do {
                         try converter!.createApp();
-                    } catch _ {
-                        
+                    } catch let error as NSError {
+                        print(error.localizedDescription)
                     }
                 }
             })
