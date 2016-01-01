@@ -15,7 +15,7 @@ class ScriptConverter {
         self.fullAppPath = savePath.URLByAppendingPathComponent("Contents/MacOs/")
         self.resourcesPath = savePath.URLByAppendingPathComponent("Contents/Resources/")
         
-        if (iconPath != nil) {
+        if iconPath != nil {
             self.iconPath = iconPath
             self.iconFileName = "\(iconPath.URLByDeletingPathExtension!.lastPathComponent!).icns"
         }
@@ -24,7 +24,7 @@ class ScriptConverter {
     func createApp() throws {
         try writeScript()
         
-        if (iconPath != nil) {
+        if iconPath != nil {
             try writeIcon()
             try writePlist()
         }
